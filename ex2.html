@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>window resize</title>
+<script type="text/javascript">
+function getsize(){
+ 
+var h=document.documentElement.clientHeight;
+var w=document.documentElement.clientWidth;
+
+
+document.getElementById('wh').innerHTML="<h1> width :" + w +"height:  "+ h +"</h1>";
+
+
+
+
+}
+</script>
+</head>
+<body onload="getsize()" onresize="getsize()">
+<div id="wh">
+</div>
+</body>
+</html>

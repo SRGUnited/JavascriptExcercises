@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>quicksort</title>
+<script type="text/javascript">
+function quicksort(sortarray){
+if(sortarray.length <= 1){
+
+return sortarray;
+
+
+}else{
+
+ var left = [];
+var right = [];
+var newarray = [];
+
+var pivot = sortarray.pop();
+var length = sortarray.length;
+
+for(var i = 0;i<length;i++){
+
+if(sortarray[i] <= pivot){
+left.push(sortarray[i]);
+
+}else{
+right.push(sortarray[i]);
+
+}
+
+
+}
+
+return newarray.concat(quicksort(left),pivot,quicksort(right));
+}
+
+
+
+}
+var my = [3,0,2,5,1,4];
+document.write("original array :" + my);
+var sort = quicksort(my);
+document.write("sorted array :"+sort);
+
+</script>
+<body>
+</body>
+</html>
