@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>json</title>
+
+<script type="text/javascript">
+
+var text= '{ "family":['+'{"firstname":"Gnanavel","lastname":"nagarethinam"},'+'{"firstname":"sangilimurugan" ,"lastname":"veerapathiran"},'+'{"firstname":"nagarethinam","lastname":"Ayyavu"}]}'
+obj1 = JSON.parse(text);
+document.getElementById("familytext").innerHTML = obj1.family[0].firstname +" "+ obj1.family[0].lastname;
+</script>
+
+</head>
+<body>
+<p id="familytext">
+</p>
+</body>
+</html>
